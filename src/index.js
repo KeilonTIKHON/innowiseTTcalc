@@ -97,10 +97,13 @@ const equals = function () {
         }
         
     }
+    stageCount = 1
     display.value = symbolArr[0].toString()
+    lastnum = []
+
     
 
-    let count = 0;
+    
 
     
     //display.value = customFunc()
