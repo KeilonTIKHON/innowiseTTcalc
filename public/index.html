@@ -8,36 +8,39 @@
 </head>
 <body>
     <div id="calculator">
+        <button id="but1" onclick="toChangeStyle('actionBtn2')"></button>
+        <button id="but2" onclick="toChangeStyle('actionBtn')"></button>
+        <button id="but3" onclick="toChangeStyle('actionBtn3')"></button>
         <input id="calcDisplay" readonly>
         <div id="buttons">
             <div id="row">
-                <button class="actionBtn" onclick="disClear()">AC</button>
-                <button class="actionBtn" onclick="changeSign()">+/-</button>
-                <button class="actionBtn" onclick="proc()">%</button>
-                <button class="actionBtn" onclick="toDisplay('/')">÷</button>
+                <button id="acbtn" class="actionBtn" onclick="disClear()">AC</button>
+                <button id="acbtn" class="actionBtn" onclick="changeSign()">+/-</button>
+                <button id="acbtn" class="actionBtn" onclick="proc()">%</button>
+                <button id="acbtn" class="actionBtn" onclick="toDisplay('/')">÷</button>
             </div>
             <div id="row">
                 <button class="numBtn" onclick="toDisplay('7')">7</button>
                 <button class="numBtn" onclick="toDisplay('8')">8</button>
                 <button class="numBtn" onclick="toDisplay('9')">9</button>
-                <button class="actionBtn" onclick="toDisplay('*')">*</button>
+                <button id="acbtn" class="actionBtn" onclick="toDisplay('*')">*</button>
             </div>
             <div id="row">
                 <button class="numBtn" onclick="toDisplay('4')">4</button>
                 <button class="numBtn" onclick="toDisplay('5')">5</button>
                 <button class="numBtn" onclick="toDisplay('6')">6</button>
-                <button class="actionBtn" onclick="toDisplay('-')">-</button>
+                <button id="acbtn" class="actionBtn" onclick="toDisplay('-')">-</button>
             </div>
             <div id="row">
                 <button class="numBtn" onclick="toDisplay('1')">1</button>
                 <button class="numBtn" onclick="toDisplay('2')">2</button>
                 <button class="numBtn" onclick="toDisplay('3')">3</button>
-                <button class="actionBtn" onclick="toDisplay('+')">+</button>
+                <button id="acbtn" class="actionBtn" onclick="toDisplay('+')">+</button>
             </div>
             <div id="row">
                 <button class="numBtn" onclick="toDisplay('0')">0</button>
-                <button class="actionBtn" onclick="toDisplay('.')">.</button>
-                <button class="actionBtn" onclick="equals()">=</button>
+                <button id="acbtn" class="actionBtn" onclick="toDisplay('.')">.</button>
+                <button id="acbtn" class="actionBtn" onclick="equals()">=</button>
                 
             </div>
            

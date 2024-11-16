@@ -380,9 +380,17 @@ const equals = function () {
 const customFunc = function () {
     return new Function('return ' + display.value)()
 }
+function toChangeStyle(nameOfClass){
+    const element = document.querySelectorAll('#acbtn')
+    for(let i=0;i<element.length;i++){
+        element[i].className=nameOfClass
+    }
+    console.log(element[0])
+}
 
 window.toDisplay = toDisplay
 window.disClear = disClear
 window.changeSign = changeSign
 window.proc = proc
 window.equals = equals
+window.toChangeStyle=toChangeStyle

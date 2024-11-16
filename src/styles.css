@@ -31,11 +31,52 @@ input {
     font-size: 25px;
     color: white;
 }
+.actionBtn2{
+    border-style: none;
+    width:100px;
+    height: 100px;
+    border-radius: 10px;
+    background: rgb(236, 29, 1);
+    margin: 3px;
+    font-size: 25px;
+    color: white;
+}
+.actionBtn3{
+    border-style: none;
+    width:100px;
+    height: 100px;
+    border-radius: 10px;
+    background: green;
+    margin: 3px;
+    font-size: 25px;
+    color: white;
+}
 .actionBtn:hover{
     background: rgb(192, 157, 0);
 }
 .actionBtn:active{
     background: rgb(241, 197, 0);
+}
+#but1{
+    width: 15px;
+    border-style: none;
+    height: 15px;
+    border-radius: 50%;
+    background-color: red;
+}
+#but2{
+    width: 15px;
+    border-style: none;
+    height: 15px;
+    border-radius: 50%;
+    background:  rgb(224, 183, 0);
+}
+#but3{
+    width: 15px;
+    border-style: none;
+    height: 15px;
+    border-radius: 50%;
+    background: green;
 }
 #row{
  width: 430px;
@@ -56,7 +97,7 @@ input {
     top: calc(50vh - 290px);
     align-items: center;
     overflow: hidden;
-    background: black;
+    background: rgb(37, 37, 37);
     font-family: Arial, sans-serif;
     border-radius: 15px;
     
