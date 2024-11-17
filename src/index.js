@@ -1,9 +1,9 @@
-import { test } from "./testfunc"
+
 import './styles.css'
 
 const display = document.getElementById('calcDisplay')
 let symbolArr = []
-let tempSymbolArr = []
+
 let lastnum = []
 let stageCount = 0;
 let forPercentcount = [];
@@ -15,17 +15,17 @@ function toTrunk() {
             let lastDec = undefined;
             console.log(alldec[alldec.indexOf('e')])
             let lastlost = alldec.pop()
-            let popped = true
-            if (alldec[alldec.indexOf('e')]===undefined) {
-                lastlost = alldec.pop()
-                lastlost = alldec.pop()
-                lastlost = alldec.pop()
-            }
+
+            //if (alldec[alldec.indexOf('e')] === undefined) {
+                //lastlost = alldec.pop()
+                //lastlost = alldec.pop()
+                //lastlost = alldec.pop()
+            //}
             console.log(alldec)
             console.log(alldec[alldec.length - 1])
             for (let i = alldec.length - 1; i >= 0; i--) {
                 console.log(alldec[alldec.length - 1] + 'popapapodandadan')
-                if ((alldec[i] === '9' || alldec[i] === '0') && lastDec !== 'skip' && alldec[alldec.indexOf('e')]===undefined) {
+                if ((alldec[i] === '9' || alldec[i] === '0') && lastDec !== 'skip' && alldec[alldec.indexOf('e')] === undefined) {
                     console.log(lastDec)
                     if (lastDec === '0' && alldec[i] === '9') {
                         console.log('okaruuuuun')
@@ -106,7 +106,7 @@ function toTrunk() {
                         symbolArr[symbolArr.length - 1] = (Number(alldec.reduce((accumulator, current) => accumulator + current))).toString()
                         break;
                     } else if (alldec[i] === '0') {
-
+                        console.log('action denied')
                     } else if (lastDec === 'skip') {
                         symbolArr[symbolArr.length - 1] = (Number(alldec.reduce((accumulator, current) => accumulator + current))).toString()
                         break;
@@ -126,6 +126,7 @@ function toTrunk() {
         }
     } catch (err) {
         display.value = 'Error'
+        console.log(err)
     }
 
 }
@@ -137,7 +138,7 @@ const toDisplay = function (char) {
 
         } else {
 
-            if (char === '-' || char === '+' || char === '*' || char === '/') { 
+            if (char === '-' || char === '+' || char === '*' || char === '/') {
                 console.log(stageCount + 'STAGECOUNT')
                 if (stageCount === 0) {
                     console.log('i')
@@ -149,7 +150,7 @@ const toDisplay = function (char) {
 
                     lastnum = []
                 } else if (stageCount === 2) {
-                    
+
                     symbolArr.push(lastnum.reduce((accumulator, current) => accumulator + current))
                     stageCount = 0
                 }
@@ -167,7 +168,7 @@ const toDisplay = function (char) {
                     stageCount = 0;
                 }
                 if ((lastnum.includes('.') && char === '.')) {
-
+                    console.log('action denied')
                 } else {
 
                     lastnum.push(char)
@@ -181,6 +182,7 @@ const toDisplay = function (char) {
         }
     } catch (err) {
         display.value = 'Error'
+        console.log(err)
     }
 
 
@@ -194,6 +196,7 @@ const disClear = function () {
         stageCount = 0;
     } catch (err) {
         display.value = 'Error'
+        console.log(err)
     }
 
 }
@@ -218,12 +221,12 @@ const changeSign = function () {
             } else {
                 console.log(lastnum)
                 lastnum.shift();
-                if(lastnum[0]===undefined){
+                if (lastnum[0] === undefined) {
                     display.value = ''
-                }else{
+                } else {
                     display.value = lastnum.reduce((accumulator, current) => accumulator + current)
                 }
-                
+
             }
         } else if (symbolArrLast === '+') {
             if (lastnum[0] === undefined) {
@@ -250,10 +253,11 @@ const changeSign = function () {
             }
 
         } else {
-
+            console.log('action denied')
         }
     } catch (err) {
         display.value = 'Error'
+        console.log(err)
     }
 
 }
@@ -262,9 +266,9 @@ const proc = function () {
         //stageCount = 0;
         const lastsymbol = Array.from(display.value)[display.value.length - 1]
         if (lastsymbol === '-' || lastsymbol === '+' || lastsymbol === '*' || lastsymbol === '/' || lastsymbol === '%' || lastsymbol === '.') {
-
+            console.log('action denied')
         } else if (lastsymbol === undefined) {
-
+            console.log('action denied')
         } else {
             console.log(lastnum)
             if (lastnum[0]) {
@@ -309,6 +313,7 @@ const proc = function () {
         //let sum = numbers.reduce((accumulator, current) => accumulator + current);
     } catch (err) {
         display.value = 'Error'
+        console.log(err)
     }
 
 }
@@ -374,16 +379,17 @@ const equals = function () {
         //console.log(customFunc())
     } catch (err) {
         display.value = 'Error'
+        console.log(err)
     }
 
 }
-const customFunc = function () {
-    return new Function('return ' + display.value)()
-}
-function toChangeStyle(nameOfClass){
+//const customFunc = function () {
+//return new Function('return ' + display.value)()
+//}
+function toChangeStyle(nameOfClass) {
     const element = document.querySelectorAll('#acbtn')
-    for(let i=0;i<element.length;i++){
-        element[i].className=nameOfClass
+    for (let i = 0; i < element.length; i++) {
+        element[i].className = nameOfClass
     }
     console.log(element[0])
 }
@@ -393,4 +399,4 @@ window.disClear = disClear
 window.changeSign = changeSign
 window.proc = proc
 window.equals = equals
-window.toChangeStyle=toChangeStyle
+window.toChangeStyle = toChangeStyle
