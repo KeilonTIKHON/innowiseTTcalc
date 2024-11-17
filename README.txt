@@ -8,6 +8,7 @@ How to run the app:
 
 
 Buttons:
+red, yellow, green buttons: Changes the theme to the color of the button.
  % :devides the last written number by 100.
  -/+ :changes + or - sign to the opposite sign (only if the last sign is + or -, for example, if we have type 2+2*2 and press +/- sign, nothing will change).
  AC : Cleares the input field.
