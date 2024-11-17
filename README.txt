@@ -1,4 +1,7 @@
+deployed at: https://calculatorinnowise.web.app
+
 Task: https://docs.google.com/document/d/1zpXXeSae-BlcxPKgw3DhxZA92cspVailrPYoaXSYrW8/edit#heading=h.5dt3hghpa22f
+
 How to run the app:
  npm run build:dev for development build,
  npm run build:prod fro production build.
